@@ -1,0 +1,9 @@
+workflows:
+  android:
+    name: Build APK
+    scripts:
+      - name: Build using system Gradle
+        script: |
+          gradle assembleDebug --info --stacktrace
+    artifacts:
+      - app/build/outputs/apk/debug/app-debug.apk
