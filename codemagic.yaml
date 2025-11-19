@@ -2,8 +2,14 @@ workflows:
   android:
     name: Build APK
     scripts:
-      - name: Build using system Gradle
+      - name: Generate Gradle Wrapper
         script: |
-          gradle assembleDebug --info --stacktrace
+          gradle wrapper --gradle-version 8.5
+
+      - name: Build using Gradle Wrapper
+        script: |
+          chmod +x ./gradlew
+          ./gradlew assembleDebug --stacktrace
+
     artifacts:
       - app/build/outputs/apk/debug/app-debug.apk
