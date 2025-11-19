@@ -1,0 +1,10 @@
+
+<resources>
+    <style name="Theme.ReelsSwip" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">false</item>
+    </style>
+    <style name="Theme.ReelsSwip.Fullscreen" parent="Theme.ReelsSwip">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+</resources>
